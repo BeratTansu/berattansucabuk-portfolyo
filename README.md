@@ -1,0 +1,1 @@
+# berattansucabuk-portfolyo
