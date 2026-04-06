@@ -10,8 +10,8 @@ function Navbar() {
             <div className="flex items-center gap-6">
                 <a href="#projects" className="text-gray-300 hover:text-orange-400">Projects</a>
                 <a href="#contact" className="text-gray-300 hover:text-orange-400">Contact</a>
-                <NavIcon href="github-linkin-buraya" icon={GitBranch} />
-                <NavIcon href="linkedin-linkin-buraya" icon={Link} />
+                <NavIcon href="https://github.com/BeratTansu" icon={GitBranch} />
+                <NavIcon href="https://www.linkedin.com/in/berat-tansu-çabuk-02b55b244" icon={Link} />
             </div>
         </nav>
     )
