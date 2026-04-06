@@ -1,16 +1,19 @@
-import Hero from './sections/Hero/Hero'
 import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
+import Hero from './sections/Hero/Hero'
 import Projects from './sections/Projects/Projects'
 import Contact from './sections/Contact/Contact'
-import Footer from './components/layout/Footer'
+import './App.css'
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <Navbar />
-      <Hero />
-      <Projects />
-      <Contact />
+      <main>
+        <Hero />
+        <Projects />
+        <Contact />
+      </main>
       <Footer />
     </div>
   )

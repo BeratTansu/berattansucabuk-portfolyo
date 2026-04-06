@@ -1,20 +1,33 @@
+import { useState, useEffect } from 'react'
 import NavIcon from '../ui/NavIcon'
-import { GitBranch, Link  } from 'lucide-react'
+import './Navbar.css'
 
 function Navbar() {
-    return (
-        <nav className="navbar fixed top-0 w-full bg-gray-900 border-b border-orange-500/20 px-8 py-4 flex justify-between items-center z-50">
-            <div className="text-orange-400 font-bold text-xl">
-                <h1>BTC</h1>
-            </div>
-            <div className="flex items-center gap-6">
-                <a href="#projects" className="text-gray-300 hover:text-orange-400">Projects</a>
-                <a href="#contact" className="text-gray-300 hover:text-orange-400">Contact</a>
-                <NavIcon href="https://github.com/BeratTansu" icon={GitBranch} />
-                <NavIcon href="https://www.linkedin.com/in/berat-tansu-çabuk-02b55b244" icon={Link} />
-            </div>
-        </nav>
-    )
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 40)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  return (
+    <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
+      <a href="#" className="navbar__logo">BTC</a>
+
+      <div className="navbar__right">
+        <a href="#projects" className="navbar__link">Projects</a>
+        <a href="#contact" className="navbar__link">Contact</a>
+        <div className="navbar__divider" />
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="navbar__social">
+          <NavIcon type="github" size={18} />
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="navbar__social">
+          <NavIcon type="linkedin" size={18} />
+        </a>
+      </div>
+    </nav>
+  )
 }
 
 export default Navbar

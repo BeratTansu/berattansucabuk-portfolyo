@@ -1,17 +1,16 @@
+import './Footer.css'
+
 function Footer() {
-    return (
-        <footer className="bg-gray-900 border-t border-orange-500/20 px-8 py-6 flex justify-between items-center"
-        >
-            <div>
-                <p className="text-gray-400 text-sm"
-                >© 2026 Berat Tansu Çabuk</p>
-            </div>
-            <div>
-                <p className="text-gray-400 text-sm"
-                >Built with React & Tailwind</p>
-            </div>
-        </footer>
-    )
+  return (
+    <footer className="footer">
+      <div className="footer__left">
+        <span className="footer__logo">BTC</span>
+        <span className="footer__divider">|</span>
+        <span className="footer__copy">&copy; 2026 Berat Tansu Çabuk</span>
+      </div>
+      <span className="footer__tech">Built with React & Tailwind</span>
+    </footer>
+  )
 }
 
 export default Footer

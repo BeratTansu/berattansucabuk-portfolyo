@@ -1,45 +1,117 @@
-import { useState } from 'react'
-import emailjs from '@emailjs/browser'
+import { useState, useEffect, useRef } from 'react'
+import NavIcon from '../../components/ui/NavIcon'
+import './Contact.css'
 
 function Contact() {
-    const [isim, setIsim] = useState("")
-    const [email, setEmail] = useState("")
-    const [mesaj, setMesaj] = useState("")
+    const [form, setForm] = useState({ name: '', email: '', message: '' })
+    const sectionRef = useRef(null)
 
-    const handleSubmit = () => {
-        emailjs.send(
-            'service_huyrk1g',
-            'template_hldbvuj',
-            {
-                name: isim,
-                email: email,
-                message: mesaj
+    useEffect(() => {
+        const elements = sectionRef.current.querySelectorAll('.fade-up')
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible')
+                        observer.unobserve(entry.target)
+                    }
+                })
             },
-            'diOdNkEHk0yM1_cMZ'
+            { threshold: 0.1 }
         )
-            .then(() => console.log("BAŞARILI"))
-            .catch((err) => console.log("HATA:", err))
+
+        elements.forEach((el) => observer.observe(el))
+        return () => observer.disconnect()
+    }, [])
+
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value })
     }
 
     return (
-        <section className="bg-gray-800 py-20 px-8" id="contact">
-            <div className="max-w-2xl mx-auto">
-                <h2 className="text-3xl font-bold text-white text-center mb-12">Get In Touch</h2>
-                <input placeholder="Your Name" className="w-full bg-gray-700 text-white rounded-lg px-4 py-3 mb-4 outline-none focus:border focus:border-orange-500"
-                    type="text" value={isim} onChange={e => setIsim(e.target.value)} />
-                <input placeholder="Your Email" className="w-full bg-gray-700 text-white rounded-lg px-4 py-3 mb-4 outline-none focus:border focus:border-orange-500"
-                    type="text" value={email} onChange={e => setEmail(e.target.value)} />
-                <textarea placeholder="Your Message"
-                    className="w-full bg-gray-700 text-white rounded-lg px-4 py-3 mb-4 outline-none focus:border focus:border-orange-500"
-                    rows={5}
-                    value={mesaj}
-                    onChange={e => setMesaj(e.target.value)}
-                ></textarea>
-                <button onClick={handleSubmit} className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-semibold"
-                >Send Message</button>
-            </div>
-            <div>
+        <section id="contact" className="contact" ref={sectionRef}>
+            <div className="contact__container">
+                <div className="fade-up">
+                    <p className="contact__label">Contact</p>
+                </div>
+                <div className="fade-up" style={{ transitionDelay: '0.08s' }}>
+                    <h2 className="contact__title">
+                        Let's <span>Talk</span>
+                    </h2>
+                </div>
 
+                <div className="contact__grid">
+                    {/* Form */}
+                    <div className="fade-up" style={{ transitionDelay: '0.15s' }}>
+                        <div className="contact__form">
+                            <input
+                                className="contact__input"
+                                type="text"
+                                name="name"
+                                placeholder="Your Name"
+                                value={form.name}
+                                onChange={handleChange}
+                            />
+                            <input
+                                className="contact__input"
+                                type="email"
+                                name="email"
+                                placeholder="Your Email"
+                                value={form.email}
+                                onChange={handleChange}
+                            />
+                            <textarea
+                                className="contact__textarea"
+                                name="message"
+                                placeholder="Your Message"
+                                rows={6}
+                                value={form.message}
+                                onChange={handleChange}
+                            />
+                            <button className="contact__submit">
+                                Send Message
+                                <NavIcon type="arrow" size={16} />
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Info */}
+                    <div className="fade-up" style={{ transitionDelay: '0.25s' }}>
+                        <div className="contact__info">
+                            <div className="contact__info-group">
+                                <p className="contact__info-label">Email</p>
+                                <a href="mailto:berattansu00@gmail.com" className="contact__info-link">
+                                    <NavIcon type="mail" size={16} />
+                                    berattansu00@gmail.com
+                                </a>
+                            </div>
+
+                            <div className="contact__info-group">
+                                <p className="contact__info-label">Social</p>
+                                <div className="contact__social-list">
+                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="contact__info-link">
+                                        <NavIcon type="github" size={16} />
+                                        GitHub
+                                        <NavIcon type="arrow" size={12} />
+                                    </a>
+                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="contact__info-link">
+                                        <NavIcon type="linkedin" size={16} />
+                                        LinkedIn
+                                        <NavIcon type="arrow" size={12} />
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="contact__info-group">
+                                <p className="contact__info-label">Location</p>
+                                <p className="contact__info-value">
+                                    <NavIcon type="map" size={16} />
+                                    Burdur, Turkey
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     )
