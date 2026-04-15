@@ -82,19 +82,19 @@ function Contact() {
                                 <p className="contact__info-label">Email</p>
                                 <a href="mailto:berattansu00@gmail.com" className="contact__info-link">
                                     <NavIcon type="mail" size={16} />
-                                    berattansu00@gmail.com
+                                    berat.tansu.cabuk@gmail.com
                                 </a>
                             </div>
 
                             <div className="contact__info-group">
                                 <p className="contact__info-label">Social</p>
                                 <div className="contact__social-list">
-                                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="contact__info-link">
+                                    <a href="https://github.com/BeratTansu" target="_blank" rel="noopener noreferrer" className="contact__info-link">
                                         <NavIcon type="github" size={16} />
                                         GitHub
                                         <NavIcon type="arrow" size={12} />
                                     </a>
-                                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="contact__info-link">
+                                    <a href="https://www.linkedin.com/in/berat-tansu-%C3%A7abuk-02b55b244/" target="_blank" rel="noopener noreferrer" className="contact__info-link">
                                         <NavIcon type="linkedin" size={16} />
                                         LinkedIn
                                         <NavIcon type="arrow" size={12} />
@@ -106,7 +106,7 @@ function Contact() {
                                 <p className="contact__info-label">Location</p>
                                 <p className="contact__info-value">
                                     <NavIcon type="map" size={16} />
-                                    Burdur, Turkey
+                                    Istanbul, Turkey
                                 </p>
                             </div>
                         </div>

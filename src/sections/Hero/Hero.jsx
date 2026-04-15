@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 import profilePhoto from '../../assets/profilePhoto.jpeg'
 import './Hero.css'
 
-const TECH_STACK = ['Java', 'Spring Boot', 'PostgreSQL', 'Docker', 'Angular', 'REST API', 'Git']
+const TECH_STACK = ['Java', 'Spring Boot', 'Python', 'FastAPI', 'React', 'PostgreSQL', 'Docker', 'Git']
 
 function Hero() {
     const sectionRef = useRef(null)

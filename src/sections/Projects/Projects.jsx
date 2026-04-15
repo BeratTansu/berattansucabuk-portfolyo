@@ -5,10 +5,24 @@ import './Projects.css'
 const PROJECTS = [
     {
         num: '01',
+        title: 'FasTravel',
+        desc: 'A travel tracking web application for managing and exploring locations. Built as a team project with RESTful API integration.',
+        tags: ['Spring Boot', 'Angular', 'PostgreSQL', 'REST API', 'Git'],
+        link: 'https://github.com/BeratTansu/FasTravel',
+    },
+    {
+        num: '02',
         title: 'Tnsup',
         desc: 'A full-stack social platform for organizing sports events. Users can create listings, apply, chat in real-time, and follow each other.',
         tags: ['Spring Boot', 'Angular', 'PostgreSQL', 'Docker', 'WebSocket', 'JWT'],
-        link: '#',
+        link: 'https://tnsup.app/',
+    },
+    {
+        num: '03',
+        title: 'Summarize.ai',
+        desc: 'An AI-powered text summarizer that supports multiple languages, PDF upload, and user authentication with summary history.',
+        tags: ['FastAPI', 'React', 'Tailwind CSS', 'Hugging Face AI', 'JWT', 'Docker'],
+        link: 'https://ai-summarizer-chi-six.vercel.app',
     },
 ]
 

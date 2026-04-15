@@ -19,10 +19,10 @@ function Navbar() {
         <a href="#projects" className="navbar__link">Projects</a>
         <a href="#contact" className="navbar__link">Contact</a>
         <div className="navbar__divider" />
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="navbar__social">
+        <a href="https://github.com/BeratTansu" target="_blank" rel="noopener noreferrer" className="navbar__social">
           <NavIcon type="github" size={18} />
         </a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="navbar__social">
+        <a href="https://www.linkedin.com/in/berat-tansu-%C3%A7abuk-02b55b244/" target="_blank" rel="noopener noreferrer" className="navbar__social">
           <NavIcon type="linkedin" size={18} />
         </a>
       </div>
