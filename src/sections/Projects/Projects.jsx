@@ -5,20 +5,29 @@ import './Projects.css'
 const PROJECTS = [
     {
         num: '01',
+        title: 'Library Management API',
+        desc: 'A layered ASP.NET Core Web API for book lending: Admin/Member roles, loan rules that block deleting books with history, DTOs with AutoMapper, and book status computed from active loans.',
+        tags: ['C#', 'ASP.NET Core', 'EF Core', 'PostgreSQL', 'AutoMapper'],
+        link: 'https://github.com/BeratTansu/Library-Management-API',
+        linkLabel: 'View Code',
+    },
+    {
+        num: '02',
         title: 'FasTravel',
         desc: 'A travel tracking web application for managing and exploring locations. Built as a team project with RESTful API integration.',
         tags: ['Spring Boot', 'Angular', 'PostgreSQL', 'REST API', 'Git'],
         link: 'https://github.com/BeratTansu/FasTravel',
+        linkLabel: 'View Code',
     },
     {
-        num: '02',
+        num: '03',
         title: 'Tnsup',
         desc: 'A full-stack social platform for organizing sports events. Users can create listings, apply, chat in real-time, and follow each other.',
         tags: ['Spring Boot', 'Angular', 'PostgreSQL', 'Docker', 'WebSocket', 'JWT'],
         link: 'https://tnsup.app/',
     },
     {
-        num: '03',
+        num: '04',
         title: 'Summarize.ai',
         desc: 'An AI-powered text summarizer that supports multiple languages, PDF upload, and user authentication with summary history.',
         tags: ['FastAPI', 'React', 'Tailwind CSS', 'Hugging Face AI', 'JWT', 'Docker'],

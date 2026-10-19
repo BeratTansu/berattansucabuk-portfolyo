@@ -23,7 +23,7 @@ function ProjectCard({ project, index }) {
             rel="noopener noreferrer"
             className="project-card__demo-btn"
           >
-            Live Demo <NavIcon type="arrow" size={14} />
+            {project.linkLabel ?? 'Live Demo'} <NavIcon type="arrow" size={14} />
           </a>
         )}
       </div>
