@@ -5,18 +5,18 @@ import './Projects.css'
 const PROJECTS = [
     {
         num: '01',
-        title: 'Simple Note API',
-        desc: 'An ASP.NET Core Web API for creating and managing notes: CRUD endpoints with EF Core Code First and migrations, proper HTTP status codes (201/400/404), and dynamic title and category search.',
-        tags: ['C#', 'ASP.NET Core', 'EF Core', 'Postman'],
-        link: 'https://github.com/BeratTansu/Simple-Note-API',
-        linkLabel: 'View Code',
-    },
-    {
-        num: '02',
         title: 'Library Management API',
         desc: 'A layered ASP.NET Core Web API for book lending: Admin/Member roles, loan rules that block deleting books with history, DTOs with AutoMapper, and book status computed from active loans.',
         tags: ['C#', 'ASP.NET Core', 'EF Core', 'PostgreSQL', 'AutoMapper'],
         link: 'https://github.com/BeratTansu/Library-Management-API',
+        linkLabel: 'View Code',
+    },
+    {
+        num: '02',
+        title: 'Simple Note API',
+        desc: 'An ASP.NET Core Web API for creating and managing notes: CRUD endpoints with EF Core Code First and migrations, proper HTTP status codes (201/400/404), and dynamic title and category search.',
+        tags: ['C#', 'ASP.NET Core', 'EF Core', 'Postman'],
+        link: 'https://github.com/BeratTansu/Simple-Note-API',
         linkLabel: 'View Code',
     },
     {
@@ -29,18 +29,18 @@ const PROJECTS = [
     },
     {
         num: '04',
+        title: 'Summarize.ai',
+        desc: 'An AI-powered text summarizer that supports multiple languages, PDF upload, and user authentication with summary history.',
+        tags: ['FastAPI', 'React', 'Tailwind CSS', 'Hugging Face AI', 'JWT', 'Docker'],
+        link: 'https://ai-summarizer-chi-six.vercel.app',
+    },
+    {
+        num: '05',
         title: 'Tnsup',
         desc: 'A full-stack social platform for organizing sports events, built with an AI-assisted workflow. Users can create listings, apply, chat in real-time, and follow each other.',
         tags: ['Spring Boot', 'Angular', 'PostgreSQL', 'Docker', 'WebSocket', 'JWT'],
         link: 'https://github.com/BeratTansu/tnsup',
         linkLabel: 'View Code',
-    },
-    {
-        num: '05',
-        title: 'Summarize.ai',
-        desc: 'An AI-powered text summarizer that supports multiple languages, PDF upload, and user authentication with summary history.',
-        tags: ['FastAPI', 'React', 'Tailwind CSS', 'Hugging Face AI', 'JWT', 'Docker'],
-        link: 'https://ai-summarizer-chi-six.vercel.app',
     },
     {
         num: '06',
