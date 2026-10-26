@@ -94,7 +94,7 @@ function Contact() {
                                         GitHub
                                         <NavIcon type="arrow" size={12} />
                                     </a>
-                                    <a href="https://www.linkedin.com/in/berat-tansu-%C3%A7abuk-02b55b244/" target="_blank" rel="noopener noreferrer" className="contact__info-link">
+                                    <a href="https://www.linkedin.com/in/berat-tansu-cabuk/" target="_blank" rel="noopener noreferrer" className="contact__info-link">
                                         <NavIcon type="linkedin" size={16} />
                                         LinkedIn
                                         <NavIcon type="arrow" size={12} />

@@ -33,7 +33,7 @@ function Hero() {
                     <div className="fade-up">
                         <div className="hero__badge">
                             <span className="hero__badge-dot" />
-                            Available for opportunities
+                            Open to internships · Feb 2027
                         </div>
                     </div>
 
@@ -59,8 +59,8 @@ function Hero() {
                             <a href="#projects" className="hero__btn-primary">
                                 See My Projects
                             </a>
-                            <a href="#contact" className="hero__btn-secondary">
-                                Get In Touch
+                            <a href="/Berat_Tansu_Cabuk_CV.pdf" target="_blank" rel="noopener noreferrer" className="hero__btn-secondary">
+                                Download Resume
                             </a>
                         </div>
                     </div>
@@ -84,7 +84,7 @@ function Hero() {
             </div>
 
             {/* Tech strip */}
-            <div style={{ position: 'absolute', bottom: 0, left: '3rem', right: '3rem' }}>
+            <div className="hero__tech-wrap">
                 <div className="hero__tech-strip fade-up" style={{ transitionDelay: '0.5s' }}>
                     <span className="hero__tech-label">Tech Stack</span>
                     <span className="hero__tech-divider" />
