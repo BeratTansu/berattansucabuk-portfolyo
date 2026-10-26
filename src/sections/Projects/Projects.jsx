@@ -13,18 +13,19 @@ const PROJECTS = [
     },
     {
         num: '02',
-        title: 'FasTravel',
-        desc: 'A travel tracking web application for managing and exploring locations. Built as a team project with RESTful API integration.',
-        tags: ['Spring Boot', 'Angular', 'PostgreSQL', 'REST API', 'Git'],
-        link: 'https://github.com/BeratTansu/FasTravel',
+        title: 'Daily Islamic Art',
+        desc: 'An Islamic art discovery mobile app built during my internship at Goldframer (Macellan Venture Studio) with an AI-assisted workflow. Daily artwork feed, collections, wallpapers and an Android home-screen widget, backed by a NestJS API and a Next.js admin panel. Not yet published.',
+        tags: ['NestJS', 'Prisma', 'PostgreSQL', 'Redis', 'React Native', 'Cloudflare R2'],
+        link: 'https://github.com/BeratTansu/daily-islamic-art',
         linkLabel: 'View Code',
     },
     {
         num: '03',
         title: 'Tnsup',
-        desc: 'A full-stack social platform for organizing sports events. Users can create listings, apply, chat in real-time, and follow each other.',
+        desc: 'A full-stack social platform for organizing sports events, built with an AI-assisted workflow. Users can create listings, apply, chat in real-time, and follow each other.',
         tags: ['Spring Boot', 'Angular', 'PostgreSQL', 'Docker', 'WebSocket', 'JWT'],
-        link: 'https://tnsup.app/',
+        link: 'https://github.com/BeratTansu/tnsup',
+        linkLabel: 'View Code',
     },
     {
         num: '04',
@@ -32,6 +33,14 @@ const PROJECTS = [
         desc: 'An AI-powered text summarizer that supports multiple languages, PDF upload, and user authentication with summary history.',
         tags: ['FastAPI', 'React', 'Tailwind CSS', 'Hugging Face AI', 'JWT', 'Docker'],
         link: 'https://ai-summarizer-chi-six.vercel.app',
+    },
+    {
+        num: '05',
+        title: 'FasTravel',
+        desc: 'A travel tracking web application for managing and exploring locations. Built as a team project with RESTful API integration.',
+        tags: ['Spring Boot', 'Angular', 'PostgreSQL', 'REST API', 'Git'],
+        link: 'https://github.com/BeratTansu/FasTravel',
+        linkLabel: 'View Code',
     },
 ]
 
